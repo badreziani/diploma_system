@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ar">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Attestation de Réussite - USMBA</title>
+	</head>
+	<body>
+		{% for student in students %}
+		<div class="diploma-wrapper">
+			<div class="diploma-container">
+				<div class="logo-container">
+					<img
+						src="{{ logo_url }}"
+						alt="USMBA Logo"
+						class="main-logo"
+					/>
+				</div>
+				<div class="diploma-type">
+					<h2 class="title-ar">دبلوم الدراسات الجامعية العامة</h2>
+					<h2 class="title-fr">DIPLOME DES ETUDES UNIVERSITAIRES GENERALES</h2>
+				</div>
+
+				<div
+					class="preamble ar-text"
+					dir="rtl"
+				>
+					<p>
+						بناء على القانون رقم 59.24 المتعلق بالتعليم العالي والبحث العلمي
+						الصادر بتنفيذه الظهير الشريف رقم 1.26.04 المؤرخ في 22 من شعبان 1447
+						(11 فبراير 2026)، ولاسيما المواد 35 و51 و79 و80 و112 منه؛
+					</p>
+					<p>
+						وعلى المرسوم رقم 2.04.89 الصادر في 18 من ربيع الآخر 1425 (7 يونيو
+						2004) بتحديد اختصاص المؤسسات الجامعية وأسلاك الدراسات العليا وكذا
+						الشهادات الوطنية المطابقة، كما وقع تغييره وتتميمه،
+					</p>
+					<p>
+						وبناء على قرار وزير التعليم العالي والبحث العلمي وتكوين الأطر رقم
+						2082.14 صادر في 05 ذي الحجة 1435 (30 سبتمبر 2014) بالمصادقة على دفتر
+						الضوابط البيداغوجية الوطنية لسلك الإجازة؛
+					</p>
+					<p>
+						وبعد الاطلاع على محضر لجنة المداولات بتاريخ:
+						<span class="date-delib">{{ deliberation_date }}</span>
+					</p>
+				</div>
+
+				<div
+					class="sub-header ar-text"
+					dir="rtl"
+				>
+					<h3>يشهد رئيس جامعة سيدي محمد بن عبد الله بفاس</h3>
+				</div>
+
+				<div class="student-data">
+					<div class="info-row">
+						<div
+							class="side-fr"
+							dir="ltr"
+						>
+							<span class="label">Nom et Prénom :</span>
+							<span class="value">{{ student.student_name_fr }}</span>
+						</div>
+						<div
+							class="side-ar"
+							dir="rtl"
+						>
+							<span class="label">أن الطالب (ة):</span>
+							<span class="value">{{ student.student_name_ar }}</span>
+						</div>
+					</div>
+					<div class="info-row">
+						<div
+							class="side-fr"
+							dir="ltr"
+						>
+							<span class="label">Né(e) le :</span>
+							<span class="value">{{ student.birth_date }}</span>
+							<span class="label">à</span>
+							<span class="value">{{ student.birth_place_fr }}</span>
+						</div>
+						<div
+							class="side-ar"
+							dir="rtl"
+						>
+							<span class="label">المزداد (ة) في:</span>
+							<span class="value">{{ student.birth_date_ar }}</span>
+							<span class="label">بـ</span>
+							<span class="value">{{ student.birth_place_ar }}</span>
+						</div>
+					</div>
+					<div
+						class="id-row"
+						dir="rtl"
+					>
+						<span class="label">الرقم الوطني للطالب (ة) :</span>
+						<span class="value">{{ student.cne }}</span>
+						<span
+							class="label fr-label"
+							dir="ltr"
+							>CNE :</span
+						>
+
+						<span class="spacer"></span>
+
+						<span class="label">رقم بطاقة التعريف الوطنية:</span>
+						<span class="value">{{ student.cin }}</span>
+						<span
+							class="label fr-label"
+							dir="ltr"
+							>CIN :</span
+						>
+					</div>
+					<div
+						class="statement-row ar-text"
+						dir="rtl"
+					>
+						<p>
+							قد استوفى(ت) الفصول الاربعة الأولى من سلك الإجازة في الدراسات
+							الأساسية
+						</p>
+					</div>
+
+					<div class="info-row">
+						<div
+							class="side-fr"
+							dir="ltr"
+						>
+							<span class="label">Filière :</span>
+							<span class="value">{{ student.filiere_fr }}</span>
+						</div>
+						<div
+							class="side-ar"
+							dir="rtl"
+						>
+							<span class="label">مسلك :</span>
+							<span class="value">{{ student.filiere_ar }}</span>
+						</div>
+					</div>
+
+					<div class="info-row">
+						<div
+							class="side-fr"
+							dir="ltr"
+						>
+							<span class="label">Mention :</span>
+							<span class="value">{{ student.mention_fr }}</span>
+						</div>
+						<div
+							class="side-ar"
+							dir="rtl"
+						>
+							<span class="label">الميزة :</span>
+							<span class="value">{{ student.mention_ar }}</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer ar-text">
+					<div class="date-center">
+						<span dir="rtl"
+							>حرر بفاس، بتاريخ:
+							<span class="value">{{ issue_date }}</span></span
+						>
+					</div>
+					<div
+						class="signatures"
+						dir="rtl"
+					>
+						<div>عميد الكلية:</div>
+						<div>رئيس الجامعة :</div>
+					</div>
+					<div
+						class="doc-number"
+						dir="rtl"
+					>
+						<span class="value">N°{{ student.doc_number }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</body>
+</html>

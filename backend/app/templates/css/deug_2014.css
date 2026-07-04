@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:wght@400;600&family=Marcellus&display=swap");
+
+@page {
+	size: A4 landscape;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #000;
+}
+
+.diploma-wrapper {
+	width: 297mm;
+	height: 210mm;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	page-break-after: always;
+}
+
+.diploma-wrapper:last-child {
+	page-break-after: auto;
+}
+
+.diploma-container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1.85cm;
+	padding-bottom: 1.85cm;
+	padding-left: 2cm;
+	padding-right: 2cm;
+}
+
+.logo-container {
+	position: absolute;
+	top: 3.4cm;
+	padding-left: 0.5cm;
+}
+
+.main-logo {
+	height: 45px;
+	width: 6.6cm;
+	object-fit: contain;
+}
+
+.diploma-type {
+	text-align: center;
+	margin-top: 55px;
+}
+
+.title-ar {
+	font-family: "Aref Ruqaa", serif;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.title-fr {
+	font-family: "Marcellus", serif;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 5px 0 20px 0;
+	letter-spacing: 2px;
+}
+
+.ar-text,
+.side-ar,
+.id-row,
+.statement-row {
+	font-family: "Amiri", serif;
+}
+
+.side-fr,
+.fr-label {
+	font-family: "EB Garamond", serif;
+}
+
+.preamble {
+	text-align: justify;
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+.preamble p {
+	margin: 0;
+}
+.preamble p .date-delib {
+	font-weight: bold;
+}
+.sub-header {
+	text-align: right;
+	/* margin-bottom: 10px; */
+}
+
+.sub-header h3 {
+	font-size: 17px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.student-data {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.info-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	width: 100%;
+	margin-bottom: 3px;
+}
+
+.side-fr {
+	font-size: 15px;
+	flex: 1;
+	display: flex;
+	align-items: baseline;
+}
+
+.side-ar {
+	font-size: 16px;
+	flex: 1;
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+}
+
+.value {
+	font-weight: bold;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.side-fr .value,
+.side-ar .value {
+	min-width: 150px;
+}
+
+.id-row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	font-size: 16px;
+}
+
+.spacer {
+	flex-grow: 1;
+}
+
+.statement-row {
+	font-size: 17px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.label {
+	font-weight: medium;
+	white-space: nowrap;
+}
+
+.footer {
+	position: relative;
+}
+
+.date-center {
+	text-align: center;
+	font-size: 16px;
+}
+
+.date-center .value {
+	display: inline-block;
+	min-width: 120px;
+}
+
+.signatures {
+	display: flex;
+	justify-content: space-around;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.doc-number {
+	position: absolute;
+	bottom: -2.7cm;
+	left: 0.8cm;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.doc-number .value {
+	font-family: "Courier Prime", monospace;
+	min-width: 80px;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+}
